@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="destination.css" />
+    <title>ExplorExperts</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <a href="/index.html" data-aos="zoom-in-left" data-aos-delay="150" class="logo">
+        <span>E</span>xplor<span>E</span>xperts
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html" data-aos="zoom-in-left" data-aos-delay="450">Home</a>
+        <a href="#about" data-aos="zoom-in-left" data-aos-delay="600"
+          >About Us</a
+        >
+        <a href="#services" data-aos="zoom-in-left" data-aos-delay="750"
+          >Services</a
+        >
+        <a href="/destination" data-aos="zoom-in-left" data-aos-delay="900"
+          >Destinations</a
+        >
+        <a href="#gallery" data-aos="zoom-in-left" data-aos-delay="1050"
+          >Gallery</a
+        >
+        <a href="#blogs" data-aos="zoom-in-left" data-aos-delay="1200">Blog</a>
+      </nav>
+
+      <button class="btn" id="login-popup">Login</button>
+      <!-- <span id="icon1">
+        <ion-icon name="moon"></ion-icon>
+      </span>
+       -->
+
+      <!-- <a href="/registration.html" class="btn" id="registerButton" data-aos="zoom-in-left" data-aos-delay="1200">Register Now</a> -->
+    </header>
+
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+      </span>
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+
+            <input type="email" required autocapitalize="none" />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required autocomplete="new-password" />
+            <label>Password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox" /> Remember me</label>
+            <a href="#">Forgot Password</a>
+          </div>
+          <button type="submit" class="btn1">Login</button>
+          <div class="username-display" style="display: none">
+            Welcome, <span id="user-username"></span>!
+          </div>
+
+          <div class="login-register">
+            <p>
+              Don't have an account?<br /><a href="#" class="register-link"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+
+            <input type="text" required autocapitalize="none" />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+
+            <input type="email" required autocapitalize="none" />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required autocomplete="new-password" />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" />I agree to the terms & conditions</label
+            >
+          </div>
+          <button type="submit" class="btn1">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account?<br /><a href="#" class="login-link"
+                >Login</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="commonSection">
+      <h1>ALL Tour</h1>
+    </section>
+    <!-- booking section -->
+    <section class="book-form" id="book-form">
+      <form action="find.html">
+        <div class="inputBox" data-aos="zoom-in" data-aos-delay="150">
+          <span>you are planning</span>
+          <input type="text" placeholder="destination" required />
+        </div>
+        <div class="inputBox" data-aos="zoom-in" data-aos-delay="300">
+          <span>Distance?</span>
+          <input type="text" required />
+        </div>
+        <div class="inputBox" data-aos="zoom-in" data-aos-delay="450">
+          <span>Total members?</span>
+          <input type="number" placeholder="no of travelers" required />
+        </div>
+
+        <input
+          type="submit"
+          value="find now"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          class="btn"
+        />
+      </form>
+    </section>
+    <!-- destination -->
+    <section class="destination" id="destination">
+      <div class="heading">
+        <span>Our Destinations</span>
+        <h1>Keep Looking Up</h1>
+      </div>
+      <div class="box-container" id="destination-container"></div>
+    </section>
+
+    <script>
+      const destinationsData = [
+      {
+        imageSrc: "/img/d2.jpg",
+        city: "Kashmir",
+        location: "Nigeen Lake",
+        price: 1000,
+        rating: 4.2,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/d1.jpg",
+        city: "Kerla",
+        location: "Paravur Lake",
+        price: 1000,
+        rating: 4.1,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/d5.jpg",
+        city: "Amritsar",
+        location: "Sri Harmandir Sahib",
+        price: 1000,
+        rating: 4.5,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/ellora.jpg",
+        city: "Aurangabad",
+        location: "Ellora caves",
+        price: 1000,
+        rating: 4.3,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/jaipur.jpg",
+        city: "Jaipur",
+        location: "Hawa-Mahal",
+        price: 1000,
+        rating: 3.9,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/rishikesh.jpg",
+        city: "Rishikesh",
+        location: "Trayambakeshwar Temple",
+        price: 1000,
+        rating: 4.9,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/haridwar.jpg",
+        city: "Uttrakhand",
+        location: "Haridwar",
+        price: 1000,
+        rating: 4.8,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      {
+        imageSrc: "/img/banaras.jpg",
+        city: "Banaras",
+        location: "Tulsi Ghat",
+        price: 1000,
+        rating: 4.2,
+        distance: 300,
+        maxGroup: 8,
+        address: "Somewhere",
+        reviews: [],
+        featured: true,
+        desc: "this is the description",
+      },
+      ];
+
+      function createDestinationBox(destination) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.innerHTML = `
+                      <div class="image">
+                          <img src="${destination.imageSrc}" alt="${destination.city}" />
+                      </div>
+                      <div class="content">
+                          <h3><i class="fa-solid fa-location-dot"></i> ${destination.city} <div class="rating"><i class="fas fa-star"></i> ${destination.rating}</div></h3>
+      
+                          <p><a href="tourDetails.html?image=${destination.imageSrc}&city=${destination.city}&address=${destination.address}&location=${destination.location}&rating=${destination.rating}&price=${destination.price}&desc=${destination.desc}&maxGroup=${destination.maxGroup}"> ${destination.location} </a></p>
+                          <span><i class="fa-solid fa-indian-rupee-sign"></i> ${destination.price} /per person</span>
+                          <a href="">Book Now<i class="fas fa-angle-right"></i></a>
+                      </div>
+                  `;
+
+        return box;
+      }
+
+      function renderDestinations() {
+        const container = document.getElementById("destination-container");
+        destinationsData.forEach((destination) => {
+          const box = createDestinationBox(destination);
+          container.appendChild(box);
+        });
+      }
+
+      renderDestinations();
+    </script>
+    <!-- destination ends -->
+    
+
+    <!-- footer -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <a href="#" class="logo"><span>E</span>xplor<span>E</span>xperts</a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <div class="share">
+            <a href="https://github.com/AkprasadoP" class="fab fa-github"></a>
+            <a
+              href="https://twitter.com/AshishKrPrasad3"
+              class="fab fa-twitter"
+            ></a>
+            <a
+              href="https://www.instagram.com/_akprasad_14_/"
+              class="fab fa-instagram"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/ashish-prasad-b22916256/"
+              class="fab fa-linkedin"
+            ></a>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#home" class="links"
+            ><i class="fas fa-arrow-right"></i>Home</a
+          >
+          <a href="#about" class="links"
+            ><i class="fas fa-arrow-right"></i>About</a
+          >
+          <a href="#services" class="links"
+            ><i class="fas fa-arrow-right"></i>Services</a
+          >
+          <a href="#destinations" class="links"
+            ><i class="fas fa-arrow-right"></i>Destinations</a
+          >
+          <a href="gallery" class="links"
+            ><i class="fas fa-arrow-right"></i>Gallery</a
+          >
+          <a href="blogs" class="links"
+            ><i class="fas fa-arrow-right"></i>Blogs</a
+          >
+        </div>
+        <div class="box">
+          <h3>contact info</h3>
+          <p><i class="fas fa-map"></i>Aurangabad, Maharastra</p>
+          <p><i class="fas fa-phone"></i>8432434916</p>
+          <p><i class="fas fa-envelope"></i>akprasad07mm@gmail.com</p>
+          <p><i class="fas fa-clock"></i>8:00am - 10:00pm</p>
+        </div>
+        <div class="box">
+          <h3>News Letter</h3>
+          <p>Want tb be updated with latest news?</p>
+          <form action="">
+            <input
+              type="email"
+              name=""
+              placeholder="enter your email"
+              class="email"
+              id=""
+            />
+            <input type="submit" value="Subscribe" class="btn" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="credit">coded by <span>Akprasad</span></div>
+
+    <script src="script2.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

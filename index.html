@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ExplorExperts</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <a href="#" data-aos="zoom-in-left" data-aos-delay="150" class="logo">
+        <span>E</span>xplor<span>E</span>xperts
+      </a>
+
+      <nav class="navbar">
+        <a href="/index.html" data-aos="zoom-in-left" data-aos-delay="450"
+          >Home</a
+        >
+        <a href="#about" data-aos="zoom-in-left" data-aos-delay="600"
+          >About Us</a
+        >
+        <a href="#services" data-aos="zoom-in-left" data-aos-delay="750"
+          >Services</a
+        >
+        <a href="/destination.html" data-aos="zoom-in-left" data-aos-delay="900"
+          >Destinations</a
+        >
+        <a href="#gallery" data-aos="zoom-in-left" data-aos-delay="1050"
+          >Gallery</a
+        >
+        <a href="#blogs" data-aos="zoom-in-left" data-aos-delay="1200">Blog</a>
+      </nav>
+
+      <button class="btn" id="login-popup">Login</button>
+      <!-- <span id="icon1">
+        <ion-icon name="moon"></ion-icon>
+      </span>
+       -->
+
+      <!-- <a href="/registration.html" class="btn" id="registerButton" data-aos="zoom-in-left" data-aos-delay="1200">Register Now</a> -->
+    </header>
+
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+      </span>
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+
+            <input type="email" required/>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required autocomplete="new-password" />
+            <label>Password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox" /> Remember me</label>
+            <a href="#">Forgot Password</a>
+          </div>
+          <button type="submit" class="btn1">Login</button>
+          <div class="username-display" style="display: none">
+            Welcome, <span id="user-username"></span>!
+          </div>
+
+          <div class="login-register">
+            <p>
+              Don't have an account?<br /><a href="#" class="register-link"
+                >Register</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+
+            <input type="text" required  />
+            <label>Username</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+
+            <input type="email" required  />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required autocomplete="new-password" />
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><input type="checkbox" />I agree to the terms & conditions</label
+            >
+          </div>
+          <button type="submit" class="btn1">Register</button>
+          <div class="login-register">
+            <p>
+              Already have an account?<br /><a href="#" class="login-link"
+                >Login</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">Let's Start</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">
+          Embark on an Incredible Journey: Experience India with Us!
+        </h3>
+        <p data-aos="fade-up" data-aos-delay="450">
+          "Welcome to ExploreXperts - Your Gateway to Extraordinary Adventures!
+          Join us on an immersive journey through the heart of India, where
+          we'll unveil the country's diverse culture, breathtaking landscapes,
+          and historical wonders.
+        </p>
+      </div>
+    </section>
+
+    <!-- booking section -->
+    <section class="book-form" id="book-form">
+      <form action="find.html">
+        <div class="inputBox" data-aos="zoom-in" data-aos-delay="150">
+          <span>you are planning</span>
+          <input type="text" placeholder="destination" required />
+        </div>
+        <div class="inputBox" data-aos="zoom-in" data-aos-delay="300">
+          <span>Distance?</span>
+          <input type="text" required />
+        </div>
+        <div class="inputBox" data-aos="zoom-in" data-aos-delay="450">
+          <span>Total members?</span>
+          <input type="number" placeholder="no of travelers" required />
+        </div>
+
+        <input
+          type="submit"
+          value="find now"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          class="btn"
+        />
+      </form>
+    </section>
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+        <div id="video-popup" class="popup">
+          <span class="close" id="close-video-popup">&times;</span>
+          <video
+            src="/videos/India A World in Our World India Cinematic Travel Film 4k.mp4"
+            controls
+            class="popup-video"
+          ></video>
+        </div>
+      </div>
+      <div class="content" data-aos="fade-right" data-aos-delay="600">
+        <span>Who we Are?</span>
+        <h3>A Glimpse into Our Journey</h3>
+        <p>
+          "ExploreXperts is your gateway to extraordinary adventures in India.
+          We specialize in crafting immersive journeys that allow you to
+          discover India's diverse culture, breathtaking landscapes, and
+          historical wonders. Our commitment to utmost comfort and convenience
+          ensures you explore India's enchanting beauty and timeless heritage
+          with ease and joy. Come, embark on an unforgettable exploration with
+          us."
+        </p>
+        <a
+          href="/videos/India A World in Our World India Cinematic Travel Film 4k.mp4"
+          class="btn"
+          >Watch Full Video</a
+        >
+      </div>
+    </section>
+    <!-- about finish -->
+
+    <!-- services -->
+    <section class="services" id="services">
+      <div class="heading">
+        <span>Our services</span>
+        <h1>Cost Effective</h1>
+      </div>
+
+      <div class="box-container">
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+          <i class="fas fa-globe"></i>
+          <h3>All Over India</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Temporibus, facere!
+          </p>
+        </div>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+          <i class="fas fa-hiking"></i>
+          <h3>Adventures</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
+            excepturi!
+          </p>
+        </div>
+        <!-- You should have the following divs inside the .box-container -->
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+          <i class="fas fa-utensils"></i>
+          <h3>Food & Drinks</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            consectetur.
+          </p>
+        </div>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+          <i class="fas fa-hotel"></i>
+          <h3>Affordable Hotels</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            consectetur.
+          </p>
+        </div>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+          <i class="fas fa-sack-dollar"></i>
+          <h3>Affordable Price</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            consectetur.
+          </p>
+        </div>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            consectetur.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- services ends -->
+
+    <!-- destination -->
+    <section class="destination" id="destination">
+      <div class="heading">
+        <span>Our Destinations</span>
+        <h1>Keep Looking Up</h1>
+      </div>
+      <div class="box-container" id="destination-container"></div>
+    </section>
+
+    <script>
+      const destinationsData = [
+        {
+          imageSrc: "/img/d2.jpg",
+          city: "Kashmir",
+          location: "Nigeen Lake",
+          price: 1000,
+          rating: 4.2,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/d1.jpg",
+          city: "Kerla",
+          location: "Paravur Lake",
+          price: 1000,
+          rating: 4.1,
+          distance: 300,
+          maxGroup: 8,
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/d5.jpg",
+          city: "Amritsar",
+          location: "Sri Harmandir Sahib",
+          price: 1000,
+          rating: 4.5,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/ellora.jpg",
+          city: "Aurangabad",
+          location: "Ellora caves",
+          price: 1000,
+          rating: 4.3,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/jaipur.jpg",
+          city: "Jaipur",
+          location: "Hawa-Mahal",
+          price: 1000,
+          rating: 3.9,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/rishikesh.jpg",
+          city: "Rishikesh",
+          location: "Trayambakeshwar Temple",
+          price: 1000,
+          rating: 4.9,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/haridwar.jpg",
+          city: "Uttrakhand",
+          location: "Haridwar",
+          price: 1000,
+          rating: 4.8,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+        {
+          imageSrc: "/img/banaras.jpg",
+          city: "Banaras",
+          location: "Tulsi Ghat",
+          price: 1000,
+          rating: 4.0,
+          distance: 300,
+          maxGroup: 8,
+          address: "Somewhere",
+          desc: "this is the description",
+        },
+      ];
+
+      function createDestinationBox(destination) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.innerHTML = `
+                <div class="image">
+                    <img src="${destination.imageSrc}" alt="${destination.city}" />
+                </div>
+                <div class="content">
+                    <h3><i class="fa-solid fa-location-dot"></i> ${destination.city} <div class="rating"><i class="fas fa-star"></i> ${destination.rating}</div></h3>
+
+                    <p>${destination.location}</p>
+                    <span><i class="fa-solid fa-indian-rupee-sign"></i> ${destination.price} /per person</span>
+                    
+                    <a href="/destination.html">Book Now<i class="fas fa-angle-right"></i></a>
+                </div>
+            `;
+
+        return box;
+      }
+
+      function renderDestinations() {
+        const container = document.getElementById("destination-container");
+        destinationsData.forEach((destination) => {
+          const box = createDestinationBox(destination);
+          container.appendChild(box);
+        });
+      }
+
+      renderDestinations();
+    </script>
+    <!-- destination ends -->
+
+    <!-- gallery section  -->
+    <section class="gallery" id="gallery">
+      <div class="heading">
+        <span>Our Gallery</span>
+        <h1>Memories Last Forever</h1>
+      </div>
+      <div class="box-container">
+        <div class="box" >
+          <img src="gallery/auli.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Auli</h3>
+        </div>
+        <div class="box" >
+          <img src="gallery/madurai-minakshi temple.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Madurai-Minakshi Temple</h3>
+        </div>
+        <div class="box" >
+          <img src="gallery/kedarnath.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Kedarnath</h3>
+        </div>
+        <div class="box" >
+          <img src="gallery/victoria.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Victoria palace</h3>
+        </div>
+        <div class="box">
+          <img src="gallery/indiagate.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>India Gate</h3>
+        </div>
+        <div class="box">
+          <img src="gallery/agra.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Agra</h3>
+        </div>
+        <div class="box" >
+          <img src="gallery/ladhak.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Ladhak</h3>
+        </div>
+        <div class="box" >
+          <img src="gallery/hawa-mahal.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Hawa-Mahal</h3>
+        </div>
+        <div class="box">
+          <img src="gallery/srinagar.jpg" alt="" />
+          <span>travel spot</span>
+          <h3>Srinagar</h3>
+        </div>
+      </div>
+      <div class="enlarged-image-container" id="enlarged-image-container">
+        <img src="" alt="" class="enlarged-image" id="enlarged-image" />
+      </div>
+    </section>
+
+    <!-- review -->
+    <section class="review">
+      <div class="box-container" id="review-container"></div>
+      <script>
+        const reviews = [
+          {
+            text: "ExploreExperts made our honeymoon in India truly magical. We explored romantic destinations, savored delicious cuisine, and stayed in luxurious accommodations. It was a perfect blend of adventure and relaxation. We'll cherish these memories forever!",
+            user: {
+              name: "Argha Bosu",
+              occupation: "Designer",
+              imageSrc: "/profiles/bosu.jpg",
+            },
+            tourLocation: "Banaras",
+          },
+          {
+            text: "What an amazing experience! ExploreExperts made my solo trip to India unforgettable.",
+            user: {
+              name: "Harshit Srivastav",
+              occupation: "Developer",
+              imageSrc: "/profiles/s2.jpg",
+            },
+            tourLocation: "Jaipur",
+          },
+          {
+            text: "They took care of all the logistics, allowing me to focus on soaking in the culture and history of this incredible country. I met wonderful people and created memories that will last a lifetime.",
+            user: {
+              name: "Anitesh Pandey",
+              occupation: "Trader",
+              imageSrc: "/profiles/pandu.jpg",
+            },
+            tourLocation: "Kashmir",
+          },
+          {
+            text: "I can't recommend ExploreExperts enough! They curated a fantastic trip for my family, and we got to explore the hidden gems of India. The guides were knowledgeable, and the entire trip was stress-free. It's the best way to experience India's rich culture and diverse landscapes.",
+            user: {
+              name: "Thakur",
+              occupation: "Gay",
+              imageSrc: "/profiles/thakur.jpg",
+            },
+            tourLocation: "Kerla",
+          },
+        ];
+
+        function generateReviewHTML(review) {
+          return `
+          <div class="box">
+            <p>${review.text}</p>
+            <p><strong>Tour Location:</strong> ${review.tourLocation}</p>
+            <div class="user">
+              <img src="${review.user.imageSrc}" alt="" />
+              <div class="info">
+                <h3>${review.user.name}</h3>
+                <span>${review.user.occupation}</span>
+              </div>
+            </div>
+          </div>
+        `;
+        }
+
+        function populateReviews() {
+          const reviewContainer = document.getElementById("review-container");
+          const reviewsHTML = reviews.map(generateReviewHTML).join("");
+          reviewContainer.innerHTML = reviewsHTML;
+        }
+
+        populateReviews();
+      </script>
+      <div class="content" data-aos="fade-right" data-aos-delay="600">
+        <span>Testimonials</span>
+        <h3>Good news from our Clients</h3>
+        <p>
+          "I had the most incredible adventure in India with ExploreExperts!
+          From the moment I booked my trip, everything was taken care of
+          seamlessly. The itinerary was well-planned, the accommodations were
+          top-notch, and the experiences were unforgettable. Thank you for
+          making my journey through India so special!"
+        </p>
+      </div>
+    </section>
+
+    <!-- review ends -->
+
+    <!-- banner img section start -->
+    <div class="banner">
+      <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+        <span>Start your Adventures</span>
+        <h3>let's explore India with us</h3>
+        <p>
+          "Join us on an unforgettable journey through India's vibrant culture,
+          breathtaking landscapes, and rich heritage. Let's explore India
+          together and create lifelong memories."
+        </p>
+        <a href="#book-form" class="btn">Book Now</a>
+      </div>
+    </div>
+    <!-- banner ends -->
+
+    <!-- blogs -->
+    <section class="blogs" id="blogs">
+      <div class="heading">
+        <span>blogs & posts</span>
+        <h1>Client experience in words</h1>
+      </div>
+      <div class="box-container">
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+          <div class="image">
+            <img src="/img/streets.jpg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="link">Exploring the Unexplored</a>
+            <p>
+              Embarking on journeys to places untouched by tourists, we discover
+              the beauty of remote landscapes and cultures.
+            </p>
+            <div class="icon">
+              <a href=""><i class="fas fa-clock"></i>26/09/2023</a>
+              <a href=""><i class="fas fa-user"></i>By Gaurav Upadhyay</a>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+          <div class="image">
+            <img src="/img/festival.jpg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="link">Cultural Insights</a>
+            <p>
+              A deep dive into the traditions and customs of the places we
+              visit, gaining a profound understanding of the local way of life
+            </p>
+            <div class="icon">
+              <a href=""><i class="fas fa-clock"></i>07/10/2023</a>
+              <a href=""><i class="fas fa-user"></i>By Palak Lohade</a>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+          <div class="image">
+            <img src="/img/shivji.jpg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="link">Nature's Wonders</a>
+            <p>
+              Witnessing the awe-inspiring beauty of nature's creations, from
+              pristine beaches to towering mountain peaks.
+            </p>
+            <div class="icon">
+              <a href=""><i class="fas fa-clock"></i>21/09/2022</a>
+              <a href=""><i class="fas fa-user"></i>By Harshit Mangtani</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog ends -->
+
+    <!-- footer -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+          <a href="#" class="logo"><span>E</span>xplor<span>E</span>xperts</a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <div class="share">
+            <a href="https://github.com/AkprasadoP" class="fab fa-github"></a>
+            <a
+              href="https://twitter.com/AshishKrPrasad3"
+              class="fab fa-twitter"
+            ></a>
+            <a
+              href="https://www.instagram.com/_akprasad_14_/"
+              class="fab fa-instagram"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/ashish-prasad-b22916256/"
+              class="fab fa-linkedin"
+            ></a>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+          <h3>Quick Links</h3>
+          <a href="#home" class="links"
+            ><i class="fas fa-arrow-right"></i>Home</a
+          >
+          <a href="#about" class="links"
+            ><i class="fas fa-arrow-right"></i>About</a
+          >
+          <a href="#services" class="links"
+            ><i class="fas fa-arrow-right"></i>Services</a
+          >
+          <a href="#destinations" class="links"
+            ><i class="fas fa-arrow-right"></i>Destinations</a
+          >
+          <a href="gallery" class="links"
+            ><i class="fas fa-arrow-right"></i>Gallery</a
+          >
+          <a href="blogs" class="links"
+            ><i class="fas fa-arrow-right"></i>Blogs</a
+          >
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+          <h3>contact info</h3>
+          <p><i class="fas fa-map"></i>Aurangabad, Maharastra</p>
+          <p><i class="fas fa-phone"></i>8432434916</p>
+          <p><i class="fas fa-envelope"></i>akprasad07mm@gmail.com</p>
+          <p><i class="fas fa-clock"></i>8:00am - 10:00pm</p>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+          <h3>News Letter</h3>
+          <p>Want tb be updated with latest news?</p>
+          <form action="">
+            <input
+              type="email"
+              name=""
+              placeholder="enter your email"
+              class="email"
+              id=""
+            />
+            <input type="submit" value="Subscribe" class="btn" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="credit">coded by <span>Akprasad</span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+    <script src="script.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
